@@ -27,7 +27,7 @@ function getTemplate(titles, res){
 }
 
 function formatHtml(titles, tmpl, res ){
-    console.log(tmpl)
+    
     const html=tmpl.replace('%', titles.join('</li><li>'))
     res.writeHead(200, {'Content-Type':'texy/html'})
     res.end(html)
